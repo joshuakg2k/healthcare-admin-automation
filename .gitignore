@@ -1,0 +1,11 @@
+# generated outputs
+outputs/
+
+# Jupyter / Python cache
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+
+# environment / OS
+.env
+.DS_Store
