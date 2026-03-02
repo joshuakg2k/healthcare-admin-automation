@@ -1,6 +1,6 @@
 # Healthcare Admin Analytics & Reporting Pipeline (Synthetic Data)
 
-A simple healthcare admin automation tool that processes lab-style results table (synthetic data) flags abnormalities and missing data, assigns admin priority, and exports a daily report + CSV tables.
+A simple healthcare admin automation tool that processes lab-style results table (synthetic data), flags abnormalities and missing data, assigns admin priority, and exports a daily report + CSV tables.
 
 > Administrative support only — not for clinical or diagnostic use.
 
