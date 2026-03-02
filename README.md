@@ -24,3 +24,7 @@ Generated files are written to:
 Install requirements:
 ```bash
 pip install -r requirements.txt
+## Run from command line (CLI)
+```bash
+python run_daily.py --input Data/sample_input.csv
+
