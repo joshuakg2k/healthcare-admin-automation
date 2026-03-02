@@ -1,0 +1,11 @@
+date,patient_id,test_name,value,ref_low,ref_high,unit
+2026-02-04,P001,Creatinine,78,60,110,umol/L
+2026-02-04,P001,Glucose,4.2,4.0,6.0,mmol/L
+2026-02-04,P002,Creatinine,145,60,110,umol/L
+2026-02-04,P002,Hemoglobin,118,130,175,g/L
+2026-02-04,P003,ALT,72,10,45,U/L
+2026-02-04,P003,Glucose,,4.0,6.0,mmol/L
+2026-02-04,P004,Creatinine,90,60,110,umol/L
+2026-02-04,P004,Hemoglobin,150,130,175,g/L
+2026-02-04,P005,ALT,,10,45,U/L
+2026-02-04,P005,Glucose,,4.0,6.0,mmol/L

@@ -1,0 +1,6 @@
+date,patient_id,priority,abnormal_count,no_data_count,needs_review
+2026-02-04,P002,HIGH,2,0,True
+2026-02-04,P001,LOW,0,0,False
+2026-02-04,P004,LOW,0,0,False
+2026-02-04,P003,NO DATA,1,1,True
+2026-02-04,P005,NO DATA,0,2,True
