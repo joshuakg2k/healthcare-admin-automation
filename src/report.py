@@ -5,7 +5,7 @@ from config import THRESHOLDS
 
 def build_summary(metrics: dict, concentration_pct: float, alerts: list, date_str: str) -> str:
 
-    alerts = generate_alerts(metrics, concentration_pct, THRESHOLDS)
+    
     total = metrics['total_patients']
     review_count = metrics['needs_review_count']
     review_pct = metrics['needs_review_pct']
@@ -41,7 +41,7 @@ def build_daily_report(date_str: str, patient_df: pd.DataFrame) -> dict:
     concentration_pct = compute_concentration(patient_df)
 
     # 3) Generate alerts
-    alerts = generate_alerts(metrics, concentration_pct)
+    alerts = generate_alerts(metrics, concentration_pct, THRESHOLDS)
 
     # 4) Build narrative summary
     summary = build_summary(metrics, concentration_pct, alerts, date_str)
