@@ -46,14 +46,25 @@ def compute_concentration(patient_df: pd.DataFrame) -> float:
 
     return round(float(top_20_share_abnormality),1)
 
-def generate_alerts(metrics: dict, concentration_pct: float) -> list:
+def generate_alerts(metrics: dict, concentration_pct: float, thresholds: dict) -> list:
     alerts = []
-    
-    if metrics['needs_review_pct'] > 60:
-       alerts.append(f'Review overload: more than 60% of patients need review')
-    if metrics['no_data_pct'] > 10:
-        alerts.append(f'Data Quality issue: more than 10% of patients have missing data')
-    if concentration_pct >= 50:
-        alerts.append(f'Workload concentrated: 50% or more abnormalities contributed by 20% of patients')
-    return alerts 
+
+    if metrics["needs_review_pct"] > thresholds["review_overload_pct"]:
+        alerts.append(
+            f"Review overload: more than {thresholds['review_overload_pct']:.0f}% of patients need review"
+        )
+
+    total_patients = metrics["total_patients"]
+    no_data_pct = (metrics["no_data_total"] / total_patients) * 100 if total_patients else 0
+    if no_data_pct > thresholds["no_data_pct"]:
+        alerts.append(
+            f"Data quality issue: more than {thresholds['no_data_pct']:.0f}% of patients have missing data"
+        )
+
+    if concentration_pct >= thresholds["concentration_pct"]:
+        alerts.append(
+            f"Workload concentrated: {thresholds['concentration_pct']:.0f}% or more abnormalities contributed by 20% of patients"
+        )
+
+    return alerts
 

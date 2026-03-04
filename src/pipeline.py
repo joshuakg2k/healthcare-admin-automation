@@ -5,6 +5,7 @@ from src.classify import add_status_column
 from src.aggregate import summarise_patients, add_priority_column
 from src.report import build_daily_report
 from src.export import export_text_report, export_patient_table, export_priority_summary
+from src.validate import validate_input_df
 
 
 def run_daily_pipeline(input_csv_path: str) -> dict:
@@ -20,6 +21,8 @@ def run_daily_pipeline(input_csv_path: str) -> dict:
 
     # ---------- 1) Load input ----------
     df = pd.read_csv(input_csv_path)
+    validate_input_df(df)
+    
 
     # ---------- 2) Classification ----------
     df_status = add_status_column(df)

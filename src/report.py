@@ -1,5 +1,7 @@
 import pandas as pd
 from src.analytics import compute_basic_metrics, compute_concentration, generate_alerts
+from config import THRESHOLDS
+alerts = generate_alerts(metrics, concentration_pct, THRESHOLDS)
 
 def build_summary(metrics: dict, concentration_pct: float, alerts: list, date_str: str) -> str:
 

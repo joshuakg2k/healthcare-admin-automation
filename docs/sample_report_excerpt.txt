@@ -1,0 +1,20 @@
+DAILY HEALTHCARE ADMIN REPORT
+Date: 2026-02-04
+--------------------------------------------------
+Key metrics:
+- Total patients processed: 5
+- Patients needing review: 3 (60.0%)
+- Missing data rate (NO DATA): 60.0%
+
+Priority breakdown:
+- HIGH: 1
+- MEDIUM: 0
+- LOW: 2
+- NO DATA: 2
+
+Workload concentration:
+- Top 20% share of abnormalities: 66.7%
+
+Alerts:
+- Data Quality issue: more than 10% of patients have missing data
+- Workload concentrated: 50% or more abnormalities contributed by 20% of patients
